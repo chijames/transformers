@@ -67,6 +67,6 @@ jobs:
         with:
           authkey: ${{ secrets.TAILSCALE_SSH_AUTHKEY }}
           slackChannel: ${{ secrets.SLACK_CIFEEDBACK_CHANNEL }}
-          slackUserID: ${{ fromJSON(env.USER_GITHUB_SLACK_MAP)[github.actor] }}
+          USER_GITHUB_SLACK_MAP: ${{ secrets.USER_GITHUB_SLACK_MAP }}
           slackToken: ${{ secrets.SLACK_CIFEEDBACK_BOT_TOKEN }}
           waitForSSH: true
