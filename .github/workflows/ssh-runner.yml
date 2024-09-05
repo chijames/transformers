@@ -67,6 +67,10 @@ jobs:
         run: |
           pwd
 
+      - name: Show path
+        run: |
+          ls -l /transformers/.github/workflows/action.yaml
+
       - name: Check python file
         working-directory: /transformers
         run: |
@@ -129,7 +133,7 @@ jobs:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_CIFEEDBACK_BOT_TOKEN }}
 
       - name: Tailscale # In order to be able to SSH when a test fails
-        uses: ./.github/workflows/action.yaml
+        uses: /transformers/.github/workflows/action.yaml
         with:
           authkey: ${{ secrets.TAILSCALE_SSH_AUTHKEY }}
           slackChannel: ${{ secrets.SLACK_CIFEEDBACK_CHANNEL }}
