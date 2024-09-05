@@ -132,10 +132,10 @@ jobs:
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_CIFEEDBACK_BOT_TOKEN }}
 
-      - name: Tailscale # In order to be able to SSH when a test fails
-        uses: /transformers/.github/workflows/action.yaml
-        with:
-          authkey: ${{ secrets.TAILSCALE_SSH_AUTHKEY }}
-          slackChannel: ${{ secrets.SLACK_CIFEEDBACK_CHANNEL }}
-          slackToken: ${{ secrets.SLACK_CIFEEDBACK_BOT_TOKEN }}
-          waitForSSH: true
+#      - name: Tailscale # In order to be able to SSH when a test fails
+#        uses: /transformers/.github/workflows/action.yaml
+#        with:
+#          authkey: ${{ secrets.TAILSCALE_SSH_AUTHKEY }}
+#          slackChannel: ${{ secrets.SLACK_CIFEEDBACK_CHANNEL }}
+#          slackToken: ${{ secrets.SLACK_CIFEEDBACK_BOT_TOKEN }}
+#          waitForSSH: true
