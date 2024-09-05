@@ -62,20 +62,10 @@ jobs:
         run: |
           nvidia-smi
 
-      - name: Check path
-        working-directory: /transformers
-        run: |
-          pwd
-
-      - name: Show path
-        run: |
-          ls -l /transformers/.github/workflows/action.yaml
-
       - name: Check python file
         working-directory: /transformers
         run: |
           python3 check_env.py
-
 
       - name: Send SSH informations to Slack channel
         uses: slackapi/slack-github-action@6c661ce58804a1a20f6dc5fbee7f0381b469e001
