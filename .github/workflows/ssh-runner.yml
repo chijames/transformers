@@ -134,11 +134,9 @@ jobs:
 
 
   my_job:
-    steps:
-      - name: Tailscale # In order to be able to SSH when a test fails
-        uses: ./.github/workflows/action.yaml
-        with:
-          authkey: ${{ secrets.TAILSCALE_SSH_AUTHKEY }}
-          slackChannel: ${{ secrets.SLACK_CIFEEDBACK_CHANNEL }}
-          slackToken: ${{ secrets.SLACK_CIFEEDBACK_BOT_TOKEN }}
-          waitForSSH: true
+    uses: ./.github/workflows/action.yaml
+    with:
+      authkey: ${{ secrets.TAILSCALE_SSH_AUTHKEY }}
+      slackChannel: ${{ secrets.SLACK_CIFEEDBACK_CHANNEL }}
+      slackToken: ${{ secrets.SLACK_CIFEEDBACK_BOT_TOKEN }}
+      waitForSSH: true
