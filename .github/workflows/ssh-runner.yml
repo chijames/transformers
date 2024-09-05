@@ -135,7 +135,7 @@ jobs:
 
   my_job:
     name: My job
-    uses: ./.github/workflows/action.yaml
+    uses: ./.github/workflows/myaction.yaml
     with:
       authkey: ${{ secrets.TAILSCALE_SSH_AUTHKEY }}
       slackChannel: ${{ secrets.SLACK_CIFEEDBACK_CHANNEL }}
