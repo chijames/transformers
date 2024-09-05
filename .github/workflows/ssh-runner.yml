@@ -134,6 +134,7 @@ jobs:
 
 
   my_job:
+    name: My job
     uses: ./.github/workflows/action.yaml
     with:
       authkey: ${{ secrets.TAILSCALE_SSH_AUTHKEY }}
