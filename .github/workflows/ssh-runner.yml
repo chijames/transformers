@@ -134,6 +134,7 @@ jobs:
 
 
   my_job:
+    steps:
       - name: Tailscale # In order to be able to SSH when a test fails
         uses: ./.github/workflows/action.yaml
         with:
